@@ -12,5 +12,6 @@ public class C01 {
     @Test
     public void test1(){
         Driver.getDriver().get(ConfigReader.getProperty("Url"));
+        Driver.closeDriver();
     }
 }
