@@ -7,10 +7,10 @@ import utilities.Driver;
 public class C01 {
 
 
-
-
     @Test
-    public void test1(){
+    public void test1() {
         Driver.getDriver().get(ConfigReader.getProperty("Url"));
-    }
+        Driver.closeDriver();
+
+}
 }
