@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="com.HotelProjectTema3" />
+        <module name="com.Batch30POM" />
+        <module name="Hotel_Project_Team3" />
       </profile>
     </annotationProcessing>
   </component>
