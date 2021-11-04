@@ -20,8 +20,6 @@ public class QAConcortPage {
 
 
 
-
-
  public void ConcortHotelLogin(){
   Driver.getDriver().get(ConfigReader.getProperty("CHQAUrl"));
   QAConcortPage qaConcortPage=new QAConcortPage();
@@ -39,7 +37,6 @@ public class QAConcortPage {
  public WebElement password;
  @FindBy(id = "btnSubmit")
  public WebElement logInButton;
-
 
 
  public String printData(int satir, int sutun) {
