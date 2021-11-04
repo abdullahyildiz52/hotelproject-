@@ -20,8 +20,6 @@ public class QAConcortPage {
 
 
 
-
-
  public void ConcortHotelLogin(){
   Driver.getDriver().get(ConfigReader.getProperty("CHQAUrl"));
   QAConcortPage qaConcortPage=new QAConcortPage();
