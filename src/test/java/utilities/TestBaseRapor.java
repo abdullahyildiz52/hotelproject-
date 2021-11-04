@@ -15,6 +15,7 @@ public abstract class TestBaseRapor {
     protected static ExtentTest extentTest; // test pass veya failed gibi bilgileri kaydeder. Ayrica ekran resmi icin de kullaniriz
     protected static ExtentHtmlReporter extentHtmlReporter; // Html raporu duzenler
     // Test işlemine başlamadan hemen önce (test methodundan önce değil, tüm test işleminden önce)
+
     @BeforeTest(alwaysRun = true) // alwaysRun : her zaman çalıştır.
     public void setUpTest() {
         extentReports = new ExtentReports();
@@ -30,6 +31,7 @@ public abstract class TestBaseRapor {
         extentHtmlReporter.config().setDocumentTitle("window handle Testi");
         extentHtmlReporter.config().setReportName("window handle Testi");
     }
+
     // Her test methodundan sonra eğer testte hata varsa, ekran görüntüsü alıp rapora ekliyor
     @AfterMethod(alwaysRun = true)
     public void tearDownMethod(ITestResult result) throws IOException {
