@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="com.HotelProjectTema3" />
-        <module name="com.Batch30POM" />
-        <module name="Hotel_Project_Team3" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.Batch30POM" target="11" />
+      <module name="Hotel_Project_Team3" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
