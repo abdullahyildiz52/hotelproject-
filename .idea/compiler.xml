@@ -9,5 +9,9 @@
         <module name="com.HotelProjectTema3" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.Batch30POM" target="11" />
+      <module name="Hotel_Project_Team3" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
