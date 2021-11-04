@@ -35,6 +35,8 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -44,6 +46,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Nov 4, 2021 11:07:12 AM</span>
 			<span class='label blue darken-3 suite-start-time'>Nov 2, 2021 11:50:32 AM</span>
 			</a>
 		</ul>
@@ -60,6 +63,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -102,6 +106,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                     <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>18</span> test(s) passed</span>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> test(s) passed</span>
                 </div>
@@ -126,12 +134,19 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
+						<span class='test-name'>Yeni kullanıcı oluşturma testi</span>
+						<span class='test-time'>Nov 4, 2021 11:07:13 AM</span>
 						<span class='test-name'>Siteye geçerli URL ile giriş testi</span>
 						<span class='test-time'>Nov 3, 2021 05:23:21 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
+	<span class='label start-time'>Nov 4, 2021 11:07:13 AM</span>
+	<span class='label end-time'>Nov 4, 2021 11:07:29 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+339ms</span>
+</div>
+<div class='test-desc'>sonuc basarili olmali </div>
 	<span class='label start-time'>Nov 3, 2021 05:23:21 PM</span>
 	<span class='label end-time'>Nov 3, 2021 05:23:21 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
@@ -261,6 +276,28 @@
 			</tr>
 		</thead>
 		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:07:19 AM</td>
+				<td class='step-details'>
+						concorthotel sayfasina gidildi
+
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:07:21 AM</td>
+				<td class='step-details'>
+						new account butonuna tıklandı
+
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:07:23 AM</td>
+				<td class='step-details'>
+						kayıt oluşturuldu
+
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
 				<td class='timestamp'>11:51:01 AM</td>
@@ -274,6 +311,10 @@
 				<td class='timestamp'>11:51:03 AM</td>
 				<td class='step-details'>
 						List of hotels sayfasina gidildi
+
+				<td class='timestamp'>11:07:29 AM</td>
+				<td class='step-details'>
+						basarılı yazısı görüldü
 
 				</td>
 			</tr>
@@ -389,6 +430,19 @@
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+863ms</span>
 </div>
 <div class='test-desc'>Edit Hotel sayfasina ulasmaliyim </div>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Otel odası seçme testi</span>
+						<span class='test-time'>Nov 4, 2021 11:07:29 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 4, 2021 11:07:29 AM</span>
+	<span class='label end-time'>Nov 4, 2021 11:08:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+339ms</span>
+</div>
+<div class='test-desc'>sonuc basarili olmali </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
 		<thead>
@@ -399,6 +453,90 @@
 			</tr>
 		</thead>
 		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:07:30 AM</td>
+				<td class='step-details'>
+						concorthotel sayfasina gidildi
+
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:07:32 AM</td>
+				<td class='step-details'>
+						login sayfasinda username ve password ile girildi
+
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:08:04 AM</td>
+				<td class='step-details'>
+						test2
+
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:08:04 AM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"oda6"}
+  (Session info: chrome=95.0.4638.69)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1C5NFC6', ip: '192.168.1.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\merco\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61381}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a55e1e8d61a1fa5bb19e0fce2819d4fa
+*** Element info: {Using=xpath, value=oda6}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at tests.murat.US10_Raporlama.test2(US10_Raporlama.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</textarea>
+
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
 				<td class='timestamp'>11:51:07 AM</td>
@@ -410,6 +548,9 @@
 		</tbody>
 	</table>
 </div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\merco\com.HotelProjectTema3/test-output/Screenshots/test220211104110804.png' src='C:\Users\merco\com.HotelProjectTema3/test-output/Screenshots/test220211104110804.png' data-src='C:\Users\merco\com.HotelProjectTema3/test-output/Screenshots/test220211104110804.png'></li>
+						</ul>
 					</div>
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
@@ -426,10 +567,17 @@
 					<div class='test-heading'>
 						<span class='test-name'>Contact butonu Concort Hotel - Contact Form sayfasina götürdü.</span>
 						<span class='test-time'>Nov 3, 2021 05:23:39 PM</span>
+						<span class='test-name'>oda rezervasyonu yapıp detayları görme testi</span>
+						<span class='test-time'>Nov 4, 2021 11:08:04 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
+	<span class='label start-time'>Nov 4, 2021 11:08:04 AM</span>
+	<span class='label end-time'>Nov 4, 2021 11:08:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>sonuç basarılı olmalı </div>
 	<span class='label start-time'>Nov 3, 2021 05:23:39 PM</span>
 	<span class='label end-time'>Nov 3, 2021 05:23:39 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
@@ -503,6 +651,116 @@
 	</div>
 	<!-- subview right -->
 </div>
+<!-- test view --><!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Nov 4, 2021 11:07:29 AM</td>
+										<td class='linked' test-id='2'>Otel odası seçme testi</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"oda6"}
+  (Session info: chrome=95.0.4638.69)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1C5NFC6', ip: '192.168.1.45', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.54 (d31a821ec901f..., userDataDir: C:\Users\merco\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61381}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a55e1e8d61a1fa5bb19e0fce2819d4fa
+*** Element info: {Using=xpath, value=oda6}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at tests.murat.US10_Raporlama.test2(US10_Raporlama.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 <!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
@@ -526,11 +784,13 @@
 					Start
 					<div class='panel-lead'>Nov 3, 2021 05:23:20 PM</div>
 					<div class='panel-lead'>Nov 2, 2021 11:50:32 AM</div>
+					<div class='panel-lead'>Nov 4, 2021 11:07:12 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
+			 		<div class='panel-lead'>Nov 4, 2021 11:08:13 AM</div>
 			 		<div class='panel-lead'>Nov 3, 2021 05:23:41 PM</div>
 			 		<div class='panel-lead'>Nov 2, 2021 11:51:13 AM</div>
 				</div>
@@ -538,6 +798,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
+					<div class='panel-lead'>0h 1m 0s+249ms</div>
 					<div class='panel-lead'>0h 0m 21s+51ms</div>
 					<div class='panel-lead'>0h 0m 40s+935ms</div>
 				</div>
@@ -574,6 +835,9 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
+                parentCount: 3,
+				passParent: 2,
+				failParent: 1,
                 parentCount: 18,
 				passParent: 18,
                 parentCount: 3,
@@ -583,6 +847,7 @@
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
+				exceptionsParent: 1,
 				exceptionsParent: 0,
 				childCount: 0,
 				passChild: 0,
@@ -608,6 +873,7 @@
 		</script>
 		<script>
 			var timeline = {
+			        "Yeni kullanıcı oluşturma testi":16.339,"Otel odası seçme testi":35.339,"oda rezervasyonu yapıp detayları görme testi":0
 			        "Siteye geçerli URL ile giriş testi":0,"navbar görünür testi":0,"Home Butonu görünür testi":0,"Rooms Butonu görünür testi.":0,"Restauran Butonu görünür testi":0,"About Butonu görünür testi":0,"Blog Butonu görünür testi":0,"Contact Butonu görünür testi":0,"Log-in butonu görünür testi.":0,"Kullanıcı navbar öğelerini görür testi":0,"Concort Hotel Yazısı click testi":0,"Home butone click testi":0,"Rooms butonu Concort Hotel - Rooms sayfasina yönlendirdi":0,"Restaurant. Butonu ,Concort Hotel - Content : Our Restaurant sayfasina yönlendirdi":0,"About butonu Concort Hotel - Content : About sayfasina yönlendirdi":0,"Blog butonu Concort Hotel - Blog sayfasina yönlendirdi.":0,"Contact butonu Concort Hotel - Contact Form sayfasina götürdü.":0,"Log in butonu Concort Hotel - Log in sayfasina yönlendirdi.":0
 			        "WebSite giris":28.01,"Edit hotel sayfasina gidis":3.863,"otel silme testi":4.898
 			};
