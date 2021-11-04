@@ -1,5 +1,6 @@
 package tests.canan;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.QAConcortPage;
@@ -8,7 +9,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class US_0006_TC2 extends TestBaseRapor {
+public class TC_2 extends TestBaseRapor {
 
 
     QAConcortPage qaConcortPage=new QAConcortPage();
@@ -26,11 +27,10 @@ public class US_0006_TC2 extends TestBaseRapor {
         us_0006QAConcortPage.hotelRooms.click();
         us_0006QAConcortPage.detailsButton.click();
 
-        SoftAssert softAssert=new SoftAssert();
         String actualTitle=Driver.getDriver().getTitle();
-        String expectedTitle="Admin - List Of Hotelrooms";
-        softAssert.assertEquals(actualTitle,expectedTitle,"yazi istendigi gibi degil");
-        System.out.println("Sayfada ki title: "+actualTitle.toUpperCase());
+        String expectedTitle="Admin - Edit Hotelroom";
+        Assert.assertEquals(actualTitle,expectedTitle,"Mesaj beklenilenden farkli");
+
     }
 
 
