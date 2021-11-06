@@ -63,7 +63,7 @@ public class US_0008_QAConcortPage {
  public WebElement baslik2satir9sutun;
  @FindBy(xpath = "//*[@id=\"datatable_ajax\"]/thead/tr[2]/td[14]/div/button/i")
  public WebElement searchButon;
- @FindBy(xpath = "//*[@id=\"datatable_ajax\"]/thead/tr[2]/td[9]/input")
+ @FindBy(xpath = "(//input[@class='form-control form-filter input-sm'])[9]")
  public WebElement contactName;
 
 
