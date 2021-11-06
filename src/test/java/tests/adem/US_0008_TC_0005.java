@@ -112,25 +112,20 @@ public class US_0008_TC_0005 {
                 sendKeys(Keys.SPACE).perform();
 
 
-        //3-Başarılı alert görülmesini test ediniz
-        // Assert.assertTrue(qaConcortPage.basariliAddRoomYazisi.isDisplayed());
+
+
 
         qaConcortPage.addRoomOkButon.click();
+        Driver.getDriver().navigate().back();
 
-        actions.sendKeys(Keys.PAGE_UP);
-        actions.sendKeys(Keys.PAGE_UP);
-        actions.sendKeys(Keys.PAGE_UP);
-        actions.sendKeys(Keys.PAGE_UP);
-        actions.sendKeys(Keys.PAGE_UP);
-        actions.sendKeys(Keys.PAGE_UP);
+        Thread.sleep(2000);
 
-        actions.sendKeys(Keys.PAGE_UP);
-        qaConcortPage.backRoomReservation.click();
+
 
         qaConcortPage.contactName.click();
 
 
-        System.out.println(contactNameSurname);
+
         Thread.sleep(2000);
         actions.sendKeys(contactNameSurname).perform();
         Thread.sleep(2000);
