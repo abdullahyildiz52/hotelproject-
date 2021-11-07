@@ -42,5 +42,6 @@ public class US_007_TC03 extends TestBaseRapor {
 
   Thread.sleep(2000);
   qaConcortPage7.save.click();
+    extentTest=extentReports.createTest("Edit HotelRooom sayfasında güncelleme testi");
 
 }}

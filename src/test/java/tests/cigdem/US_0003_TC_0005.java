@@ -17,7 +17,7 @@ public class US_0003_TC_0005 extends TestBaseRapor {
         Driver.getDriver().get("https://qa-environment.concorthotel.com/Account/Register");
         qaConcortPage3.save.click();
         Assert.assertTrue(qaConcortPage3.RegistrationForm.isDisplayed());
-
+        extentTest=extentReports.createTest("Register sayfasında textboxlar doğru olarak doldurulduktan sonra save butonuna tıklanmalı testi");
 
     }
 }

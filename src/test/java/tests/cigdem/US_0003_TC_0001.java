@@ -23,7 +23,7 @@ public class US_0003_TC_0001 extends TestBaseRapor {
 
         //"Create a new account"butonuna tıkladığında "Registration Formu"görmeli
         Assert.assertTrue(qaConcortPage3.RegistrationForm.isDisplayed());
-
+        extentTest=extentReports.createTest("Create a new account butonuna tıkladığında Registration Formu görme testi");
 
 
 

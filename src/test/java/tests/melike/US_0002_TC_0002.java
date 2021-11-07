@@ -6,8 +6,9 @@ import org.testng.asserts.SoftAssert;
 import pages.US0002QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_0002_TC_0002 {
+public class US_0002_TC_0002 extends TestBaseRapor {
 
     @Test
     public void test2 () {
@@ -35,10 +36,8 @@ public class US_0002_TC_0002 {
         //7- "password" textbox'ının yazılabilir olduğunu test edin.
         US2QaPage.password.sendKeys(ConfigReader.getProperty("CHQAValidPassword"));
         System.out.println("password textbox yazılabilir durumda");
-
-
-
         softAssert.assertAll();
+        extentTest=extentReports.createTest("Login sayfasi textbox'ının yazılabilir olduğunu testi");
         Driver.closeDriver();
     }
 }

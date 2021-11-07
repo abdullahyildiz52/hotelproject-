@@ -6,8 +6,9 @@ import org.testng.asserts.SoftAssert;
 import pages.US0002QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_0002_TC_0001 {
+public class US_0002_TC_0001 extends TestBaseRapor {
 
 
 
@@ -41,6 +42,7 @@ public class US_0002_TC_0001 {
         Assert.assertTrue(US2QaPage.userName.isDisplayed(),"Username textbox'ı görüntülenemiyor");
         Assert.assertTrue(US2QaPage.password.isDisplayed());
         softAssert.assertAll();
+        extentTest=extentReports.createTest("Login sayfasi textbox'ının görülebilir olduğunun testi");
         Driver.closeDriver();
     }
 }

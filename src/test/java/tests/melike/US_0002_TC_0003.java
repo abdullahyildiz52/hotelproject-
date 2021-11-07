@@ -6,8 +6,9 @@ import org.testng.asserts.SoftAssert;
 import pages.US0002QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_0002_TC_0003 {
+public class US_0002_TC_0003 extends TestBaseRapor {
 
     @Test
     public void test3 () {
@@ -31,9 +32,8 @@ public class US_0002_TC_0003 {
         Assert.assertTrue(US2QaPage.profile.isDisplayed(),"profile öğesi görülebilir değil");
     //7- User Menu altında "Change Password" öğesinin görülebilir ve tıklanabilir olduğunu test edin
         Assert.assertTrue(US2QaPage.changePassword.isDisplayed(),"Change Password öğesi görülebilir değil");
-
-
         softAssert.assertAll();
+        extentTest=extentReports.createTest("Login sayfasi User Menu görülebilir testi");
         Driver.closeDriver();
     }
 }

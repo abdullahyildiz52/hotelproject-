@@ -35,7 +35,7 @@ public class US_0001_TC_0003 extends TestBaseRapor {
         Actions actions=new Actions(Driver.getDriver());
 
         actions.doubleClick(us0001QAConcortPage.checkinDate).doubleClick().perform();
-        String checkinTarih="11/3/2021";
+        String checkinTarih="11/6/2021";
         us0001QAConcortPage.checkinDate.sendKeys(checkinTarih);
         extentTest=extentReports.createTest("checkin tarih girme testi");
         String checkoutTarih="12/31/2022";

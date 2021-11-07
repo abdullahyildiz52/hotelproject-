@@ -29,7 +29,7 @@ public class US_007_TC01 extends TestBaseRapor {
 
     //7-Yöneticinin"LIST OF HOTELROOMS" sayfasında olduğunu test edin
    Assert.assertTrue(qaConcortPage7.listOfHotelroomlinki.isDisplayed());
-
+    extentTest=extentReports.createTest("Yöneticinin\"LIST OF HOTELROOMS\" sayfasında olduğu testi");
     Driver.closeDriver();
 }
 }

@@ -6,8 +6,9 @@ import org.testng.asserts.SoftAssert;
 import pages.US0002QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_0002_TC_0004 {
+public class US_0002_TC_0004 extends TestBaseRapor {
 
     @Test
     public void test4 () {
@@ -34,7 +35,7 @@ public class US_0002_TC_0004 {
         softAssert.assertEquals(actualURL,expectedURL,"URL beklenen ile aynı değil");
 
         softAssert.assertAll();
-
+        extentTest=extentReports.createTest("LISTOFUSERS görülebilir testi");
         Driver.closeDriver();
 
 

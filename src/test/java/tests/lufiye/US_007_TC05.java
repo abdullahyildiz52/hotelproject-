@@ -44,5 +44,6 @@ public class US_007_TC05 extends TestBaseRapor {
         qaConcortPage7.onayButonu.click();
         Thread.sleep(2000);
         Assert.assertTrue(qaConcortPage7.deleteAlertMesaj.isDisplayed());
+        extentTest=extentReports.createTest("Edit HotelRooom sayfasında silme testi");
 }
 }

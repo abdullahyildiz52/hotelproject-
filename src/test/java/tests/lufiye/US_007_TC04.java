@@ -57,5 +57,7 @@ public class US_007_TC04 extends TestBaseRapor {
        qaConcortPage7.deleteButonu.getText().equals("Would you like to continue?");
         //Thread.sleep(2000);
         qaConcortPage7.onayButonu.click();
+
+        extentTest=extentReports.createTest("Edit HotelRooom sayfasında DELETE testi");
     }
 }

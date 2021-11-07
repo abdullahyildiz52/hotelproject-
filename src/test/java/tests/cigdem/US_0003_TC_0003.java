@@ -52,6 +52,7 @@ public class US_0003_TC_0003 extends TestBaseRapor {
 
         qaConcortPage3.save.click();
         Assert.assertTrue(qaConcortPage3.RegistrationForm.isDisplayed());
+        extentTest=extentReports.createTest("Tüm bilgiler tam ve doğru olarak girildikten sonra Save butonu tıklama testi");
 
     }
 }

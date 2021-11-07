@@ -32,6 +32,8 @@ public class US_007_TC02 extends TestBaseRapor {
 
         qaConcortPage7.detailsButton.click();
         //9-Yönetici details butonuna tıkladığında  "Edit HotelRooom" sayfasını görmeli
+
         Assert.assertTrue(qaConcortPage7.editHotelRoom.isDisplayed());
+        extentTest=extentReports.createTest("Yöneticinin Edit HotelRooom sayfasında olduğu testi");
 }
 }

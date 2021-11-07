@@ -6,8 +6,9 @@ import org.testng.asserts.SoftAssert;
 import pages.US0002QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US_0002_TC_0005 {
+public class US_0002_TC_0005 extends TestBaseRapor {
 
     @Test
     public void test5 () {
@@ -29,7 +30,7 @@ public class US_0002_TC_0005 {
         softAssert.assertFalse(actualURL.equals(expectedURL),"Geçersiz kullanıcı adı ve password ile giriş başarılı TEST FAILED");
         //6-Sayfada hata mesajının görülebilir olduğunu test edin
         Assert.assertTrue(US2QaPage.hataMesaji.isDisplayed(),"Hata mesajı görüntülenemiyor");
-
+        extentTest=extentReports.createTest("Geçerli kullanıcı adı ve password ile giriş başarılı testi");
         Driver.closeDriver();
 
 

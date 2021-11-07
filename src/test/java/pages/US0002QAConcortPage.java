@@ -6,8 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class US0002QAConcortPage {
+public class US0002QAConcortPage  {
     WebDriver driver;//--->1.adim
 
     public US0002QAConcortPage() {//--->2.adim

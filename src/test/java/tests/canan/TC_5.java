@@ -9,8 +9,9 @@ import pages.US_0006QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class TC_5 {
+public class TC_5 extends TestBaseRapor {
     QAConcortPage qaConcortPage = new QAConcortPage();
     US_0006QAConcortPage us_0006QAConcortPage = new US_0006QAConcortPage();
 
