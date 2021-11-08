@@ -1,11 +1,10 @@
 package tests.munir;
 
-import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.US_0004QAConcortPage;
+import pages.US_0004_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -20,7 +19,7 @@ public class C02_TC0002 extends TestBaseRapor {
     public void test2() {
         extentTest = extentReports.createTest("Siteye giriş ve otel ekleme (PT).");
 
-        US_0004QAConcortPage us_0004QAConcortPage = new US_0004QAConcortPage();
+        US_0004_QAConcortPage us_0004QAConcortPage = new US_0004_QAConcortPage();
         us_0004QAConcortPage.ConcortHotelLogin();
         extentTest.info("Siteye gidildi ve giriş yapıldı");
 

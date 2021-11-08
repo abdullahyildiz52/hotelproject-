@@ -5,7 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.QAConcortPage;
-import pages.US_0006QAConcortPage;
+import pages.US_0006_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -14,7 +14,7 @@ import utilities.TestBaseRapor;
 public class TC_4 extends TestBaseRapor {
 
     QAConcortPage qaConcortPage = new QAConcortPage();
-    US_0006QAConcortPage us_0006QAConcortPage = new US_0006QAConcortPage();
+    US_0006_QAConcortPage us_0006QAConcortPage = new US_0006_QAConcortPage();
     ReusableMethods reusableMethods = new ReusableMethods();
 
     @Test

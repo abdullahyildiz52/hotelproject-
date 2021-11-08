@@ -2,19 +2,14 @@ package tests.murat;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WrapsDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.QAConcortPage;
-import pages.US10_QAConcortPage;
+import pages.US_0010_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
-
-import java.util.Locale;
 
 public class US10_TC01 extends TestBaseRapor {
 
@@ -23,7 +18,7 @@ public class US10_TC01 extends TestBaseRapor {
 
         Driver.getDriver().get(ConfigReader.getProperty("CHQAUrl"));
 
-        US10_QAConcortPage  us10_qaConcortPage=new US10_QAConcortPage();
+        US_0010_QAConcortPage us10_qaConcortPage=new US_0010_QAConcortPage();
 
         us10_qaConcortPage.ilkLoginLinki.click();
 

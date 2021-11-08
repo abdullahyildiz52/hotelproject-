@@ -3,7 +3,7 @@ package tests.mehmet;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.US0001QAConcortPage;
+import pages.US_0001_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -14,7 +14,7 @@ public class US_0001_TC_0005 extends TestBaseRapor {
     //Anasayfaki "Our Rooms" yazısının görülmesi
 
 
-    US0001QAConcortPage us0001QAConcortPage = new US0001QAConcortPage();
+    US_0001_QAConcortPage us0001QAConcortPage = new US_0001_QAConcortPage();
     ReusableMethods reusableMethods = new ReusableMethods();
 
     @Test

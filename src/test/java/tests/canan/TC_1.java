@@ -1,10 +1,8 @@
 package tests.canan;
-import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.QAConcortPage;
-import pages.US_0006QAConcortPage;
+import pages.US_0006_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
@@ -14,7 +12,7 @@ public class TC_1 extends TestBaseRapor {
 
 
    QAConcortPage qaConcortPage=new QAConcortPage();
-   US_0006QAConcortPage us_0006QAConcortPage=new US_0006QAConcortPage();
+   US_0006_QAConcortPage us_0006QAConcortPage=new US_0006_QAConcortPage();
     //Açılan pencerede Hotel Management->Hotel Rooms tıklandığında "LIST OF HOTELROOMS" sayfasına gelmeliyim
 
     @Test

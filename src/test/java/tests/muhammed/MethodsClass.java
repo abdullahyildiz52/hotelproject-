@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import pages.Pages_US_0005;
+import pages.US_0005_QAConcortPage;
 import pages.QAConcortPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -17,7 +17,7 @@ public class MethodsClass extends TestBaseRapor {
 
     QAConcortPage qaConcortPage= new QAConcortPage();
     Faker faker=new Faker();
-    Pages_US_0005 pages_US_0005= new Pages_US_0005();
+    US_0005_QAConcortPage pages_US_0005= new US_0005_QAConcortPage();
 
     public void websiteGirisToHotelList(){
 

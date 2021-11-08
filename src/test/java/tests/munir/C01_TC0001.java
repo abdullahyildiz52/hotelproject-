@@ -1,10 +1,8 @@
 package tests.munir;
 
-import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.US_0004QAConcortPage;
-import utilities.ConfigReader;
+import pages.US_0004_QAConcortPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
@@ -18,7 +16,7 @@ public class C01_TC0001 extends TestBaseRapor {
     public void test1(){
         extentTest = extentReports.createTest("Siteye giriş ve login başarılı.");
 
-        US_0004QAConcortPage us_0004QAConcortPage = new US_0004QAConcortPage();
+        US_0004_QAConcortPage us_0004QAConcortPage = new US_0004_QAConcortPage();
         us_0004QAConcortPage.ConcortHotelLogin();
         extentTest.info("Siteye gidildi ve giriş yapıldı");
 

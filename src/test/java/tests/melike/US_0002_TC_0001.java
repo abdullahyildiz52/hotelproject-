@@ -3,7 +3,7 @@ package tests.melike;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.US0002QAConcortPage;
+import pages.US_0002_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
@@ -15,7 +15,7 @@ public class US_0002_TC_0001 extends TestBaseRapor {
     @Test
     public void test1(){
 
-        US0002QAConcortPage US2QaPage = new US0002QAConcortPage();
+        US_0002_QAConcortPage US2QaPage = new US_0002_QAConcortPage();
 
         //1- Bir yönetici olarak otelin anasayfasına gidin
         Driver.getDriver().get(ConfigReader.getProperty("CHQAUrl"));

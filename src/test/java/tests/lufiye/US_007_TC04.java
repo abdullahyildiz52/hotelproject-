@@ -1,18 +1,16 @@
 package tests.lufiye;
 
-import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.QAConcortPage7;
+import pages.US_0007_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class US_007_TC04 extends TestBaseRapor {
-    QAConcortPage7 qaConcortPage7 = new QAConcortPage7();
+    US_0007_QAConcortPage qaConcortPage7 = new US_0007_QAConcortPage();
 
     @Test
     public void pozitifTest() throws InterruptedException {

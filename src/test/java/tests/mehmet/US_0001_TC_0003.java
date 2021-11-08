@@ -1,12 +1,9 @@
 package tests.mehmet;
 
-import com.github.javafaker.Faker;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.QAConcortPage;
-import pages.US0001QAConcortPage;
+import pages.US_0001_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -17,7 +14,7 @@ public class US_0001_TC_0003 extends TestBaseRapor {
     //Anasayfaki "Check-in Menusunden"uygun kriterdeki oteller listelenmeli.
 
 
-    US0001QAConcortPage us0001QAConcortPage = new US0001QAConcortPage();
+    US_0001_QAConcortPage us0001QAConcortPage = new US_0001_QAConcortPage();
     ReusableMethods reusableMethods = new ReusableMethods();
 
     @Test

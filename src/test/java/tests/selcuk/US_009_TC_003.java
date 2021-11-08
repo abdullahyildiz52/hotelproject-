@@ -3,7 +3,7 @@ package tests.selcuk;
 import com.github.javafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.US_009QAConcortPage;
+import pages.US_0009_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
@@ -19,8 +19,8 @@ public class US_009_TC_003 extends TestBaseRapor {
     // 1-Kullanıcı Concort HOTELS sayfasına gider
         Driver.getDriver().get(ConfigReader.getProperty("CHQAUrl"));
 
-    //  US_009QAConcortPage sayfasindan Obje olusturmaliyiz
-    US_009QAConcortPage us_009QAConcortPage=new US_009QAConcortPage();
+    //  US_0009_QAConcortPage sayfasindan Obje olusturmaliyiz
+    US_0009_QAConcortPage us_009QAConcortPage=new US_0009_QAConcortPage();
 
     //  2-Kullanıcı sağ üstteki "Log in" butonuna tıklar
         us_009QAConcortPage.firstlogIn.click();

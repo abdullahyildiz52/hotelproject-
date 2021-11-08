@@ -2,13 +2,13 @@ package tests.lufiye;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.QAConcortPage7;
+import pages.US_0007_QAConcortPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
 public class US_007_TC02 extends TestBaseRapor {
-    QAConcortPage7 qaConcortPage7=new QAConcortPage7();
+    US_0007_QAConcortPage qaConcortPage7=new US_0007_QAConcortPage();
     @Test
     public void Test(){
 
